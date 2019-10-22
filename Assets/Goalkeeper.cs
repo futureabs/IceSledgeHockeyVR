@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Goalkeeper : MonoBehaviour
 {
+    float xmove = 0.05f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +21,14 @@ public class Goalkeeper : MonoBehaviour
 
         // 座標を取得
         Vector3 pos = myTransform.position;
-        pos.x += 0.01f;
-        pos.y += 0.01f;
+        if (pos.x < -1.8f){
+            xmove = 0.05f;
+        }
+        else if (pos.x > 1.2f){
+            xmove = -0.05f;
+        }
+
+        pos.x += xmove;
         myTransform.position = pos;  // 座標を設定
     }
 }
