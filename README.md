@@ -1,2 +1,2 @@
-# IceSledgeHockeyVR
-Ice sledge hockey VR game
+# IceSledgeHockeyParty
+Ice sledge hockey mini game collection
